@@ -69,6 +69,16 @@ body {
     text-align: center;
 }
 
+@media only screen and (max-width: 425px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .intro {
+        display: none;
+    }
+}
+
 /* header end*/
 
 
