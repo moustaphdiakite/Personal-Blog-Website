@@ -101,9 +101,8 @@ body {
 .oneone {
     grid-area: oneone;
     background-image: url(../media/images/Naruto.jpg);
-    
-    
 }
+
 .onetwo {
     grid-area: onetwo;
     background-image: url(../media/images/DragonBallZ.jpg);
@@ -178,6 +177,63 @@ body {
 }
 
 
+
+@media only screen and (max-width: 425px) {
+    .grid-container-two {
+        display: grid;
+        grid-template-columns: 0px 1fr 0px;
+        grid-template-rows: repeat(9, 1fr);
+        gap: 14px 15px;
+        grid-template-areas: ". oneone ."
+        ". onetwo ."
+        ". onethree ."
+        ". twoone ."
+        ". twotwo ."
+        ". twothree ."
+        ". threeone ."
+        ". threetwo ."
+        ". threethree .";
+    }
+
+    .oneone {
+        grid-area: oneone;
+    }
+
+    .onetwo {
+        grid-area: onetwo;
+    }
+
+    .onethree {
+        grid-area: onethree;
+    }
+
+    .twoone {
+        grid-area: twoone;
+    }
+
+    .twotwo {
+        grid-area: twotwo;
+    }
+
+    .twothree {
+        grid-area: twothree;
+    }
+
+    .threeone {
+        grid-area: threeone;
+    }
+
+    .threetwo {
+        grid-area: threetwo;
+    }
+
+    .threethree {
+        grid-area: threethree;
+    }
+
+
+}
+
 /* main end*/
 
 
@@ -188,8 +244,13 @@ body {
     grid-template-columns: 0px repeat(3, 1fr) 0px;
     grid-template-rows: 64px;
     gap: 20px 20px;
-    grid-template-areas:
-        ". copyright subs scrollup .";
+    grid-template-areas: ". copyright subs scrollup .";
+
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    z-index: 1;
+        
 }
 
 .copyright {
@@ -264,4 +325,50 @@ body {
     display: inline-block;
 }
 
+.hidden-desk {
+    display: none;
+}
 
+
+@media only screen and (max-width: 425px) {
+    .grid-container-three {
+        width: 100%;
+        position: fixed;
+        bottom: 0%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas: 
+        "scrollup"
+        "subs"
+        "copyright";
+    }
+
+    .subs {
+        grid-area: subs;
+    }
+
+    .scrollup {
+        grid-area: scrollup;
+    }
+
+    .copyright {
+        grid-area: copyright;
+    }
+
+    .subs-content {
+        font-size: xx-large;
+    }
+
+    .visible-desk {
+        display: none;
+    }
+
+    .hidden-desk {
+        display: unset;
+    }
+
+
+}
