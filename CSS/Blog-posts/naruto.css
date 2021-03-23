@@ -6,7 +6,7 @@ header {
     margin-bottom: 1em;
 }
 figcaption {
-    font-size: smaller;
+    font-size: xx-small;
 }
 figure {
     height: 100%;
@@ -71,3 +71,59 @@ p {
     justify-content: center;
 }
 
+@media only screen and (max-width: 425px) {
+
+
+    .grid-container-naruto {
+        grid-template-columns: 0px 1fr 0px;
+        grid-template-rows: 50px auto auto auto auto auto auto;
+        grid-template-areas: 
+        ". name ."
+        ". p1 ."
+        ". intro1 ."
+        ". p2 ."
+        ". xdetails ."
+        ". sm ."
+        ". smicon .";
+        margin-bottom: 140px;
+    }
+    
+    .name {
+        grid-area: name;
+    }
+
+    .p1 {
+        grid-area: p1;
+
+    }
+
+    .intro1 {
+        grid-area: intro1;
+    }
+
+    .p2 {
+        grid-area: p2;
+    }
+
+    .xdetails {
+        grid-area: xdetails;
+    }
+
+    .sm {
+        grid-area: sm;
+        
+    }
+
+    .smicon {
+        grid-area: smicon;
+    }
+
+    figcaption {
+        font-size: xx-small;
+    }
+
+    p {
+        margin-top: unset;
+        text-align: justify;
+    }
+}
