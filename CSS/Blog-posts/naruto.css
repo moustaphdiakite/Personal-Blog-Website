@@ -18,6 +18,10 @@ p {
     line-height: 3;
 }
 
+.hidden-intro {
+    display: none;
+}
+
 .name h1 {
     font-size: xx-large;
     margin: unset;

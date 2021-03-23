@@ -14,6 +14,18 @@ body {
     
 }
 
+small {
+    font-size: x-small;
+}
+
+.reference {
+    font-size: x-small;
+    color: red;
+    font-weight: bolder;
+    padding: 1em;
+    background-color: azure;
+}
+
 
 
 /* header start*/ 
@@ -74,7 +86,8 @@ body {
         display: flex;
         flex-direction: column;
     }
-    .intro {
+
+    .hidden-intro {
         display: none;
     }
 }
